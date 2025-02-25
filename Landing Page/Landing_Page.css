@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Basic styling */
+body {
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    position: fixed; /* Keep the navbar fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Remove background color */
+    background-color: transparent; /* Make navbar background transparent */
+    /* Add a backdrop filter for a frosted glass effect (optional) */
+    backdrop-filter: blur(5px); /* Adjust blur radius as needed */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+    padding: 20px 0;
+    z-index: 2; /* Ensure navbar is above hero image */
+    transition: background-color 0.3s ease; /* Add transition for background color change */
+}
+
+nav:hover { /* Optional: Change background color on hover */
+    background-color: rgba(255, 255, 255, 0.7); /* Increased opacity */
+    backdrop-filter: blur(5px); /* Adjust blur radius as needed */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+}
+
+nav ul li a { /* Targets all the links inside navbar */
+    color: black; /* Or any other color that provides better contrast */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #0d6efd; /* Blue color on hover */
+}
+
+/* Logo */
+.logo img {
+    max-height: 40px; /* Sesuaikan tinggi logo Anda */
+}
+
+/* Navigasi */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+    position: relative; /* Untuk positioning dropdown */
+}
+
+nav a {
+    color: black; /* Warna teks hitam */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 21px;
+    display: block; /* memastikan link memenuhi area li */
+}
+
+.logo{
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    display: block;
+}
+
+/* Dropdown */
+.dropdown .dropbtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Tombol */
+.buttons {
+    display: flex;
+}
+
+.login {
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    border: 2px solid black;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Tambahkan transisi */
+}
+
+.login:hover {
+    background-color: black; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+.trial {
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Tambahkan transisi */
+}
+
+.trial:hover {
+    background-color: black; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+.hero-image { /* Style hero-image directly */
+    width: 100%;
+    height: 800px; /* Or whatever height you want */
+    background-image: url("Hero_Image.png"); /* Background on hero-image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex; /* For button positioning */
+    justify-content: flex-end; /* Align button to the right */
+    align-items: flex-end; /* Align button to the bottom */
+    padding: 20px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 63%; /* Vertically center */
+    left: 75%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Adjust for true center */
+    z-index: 1; /* Ensure button is above the image */
+}
+
+.join-button {
+    background-color: #f9f9f9;
+    color: black;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 500; /* Semi-bold font weight */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Add shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.join-button:hover {
+    background-color: #0d6efd; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
+    border: none;
+}

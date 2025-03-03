@@ -143,8 +143,9 @@ nav a {
 }
 
 .login:hover {
-    background-color: black; /* Warna latar belakang saat hover */
-    color: white; /* Warna teks saat hover */
+    color: white;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
 }
 
 .trial {
@@ -157,8 +158,9 @@ nav a {
 }
 
 .trial:hover {
-    background-color: black; /* Warna latar belakang saat hover */
-    color: white; /* Warna teks saat hover */
+    color: white;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
 }
 
 .hero-image { /* Style hero-image directly */
@@ -201,3 +203,4 @@ nav a {
     color: white; /* Warna teks saat hover */
     border: none;
 }
+

@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.countainer-login{
+    display: flex;
+    height: 100vh;
+}
+
+ .image-login{
+    width: 50%;
+    background-color: blue;
+ }
+
+ .image-login img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+ }
+
+ .login-form-countainer{
+    width: 50%;
+    
+ }
